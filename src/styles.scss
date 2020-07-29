@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(-45deg, #8691b3, #edeef3);
+}
+body *,
+body *:before,
+body *:after {
+  content: "";
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+}

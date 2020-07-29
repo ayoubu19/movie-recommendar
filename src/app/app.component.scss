@@ -1,0 +1,84 @@
+.eye {
+  width: 332px;
+  height: 332px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  animation: eyeAnimation 4s cubic-bezier(1, 0, 1, 1) infinite;
+}
+@keyframes eyeAnimation {
+  0%,
+  33%,
+  100% {
+    box-shadow: inset -8px -13px 20px -10px rgba(230, 230, 236, 0.04),
+      64px 55px 40px -40px #38406a, 20px 18px 30px -10px #38406a,
+      inset -70px -50px 60px -30px #4b6398, inset -90px -90px 70px -90px #697398,
+      inset -70px -50px 100px -40px #697398, inset 80px 50px 80px -50px #eeeef3,
+      -25px -15px 50px -10px #f6f6fb, 14px -1px 50px -10px #7e7ea9,
+      1px 9px 50px -10px #7e7ea9,
+      inset -90px 40px 60px -20px rgba(116, 66, 255, 0.1),
+      inset -90px -120px 60px -20px rgba(116, 66, 255, 0.1);
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+  65% {
+    box-shadow: inset -8px -13px 60px -10px rgba(230, 230, 236, 0.2),
+      44px 35px 20px -20px #687294, 11px 9px 9px -4px #6e799d,
+      inset -100px -70px 40px -110px #6a789c,
+      inset -90px -90px 70px -90px #697398,
+      inset -70px -50px 100px -40px #697398, inset 80px 50px 80px -50px #eeeef3,
+      -25px -15px 30px -10px #f6f6fb;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.eye::after {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow: inset -50px -20px 30px 0px #e7e2f5,
+    inset 100px 10px 20px -27px #2f2c4c, 0px 0px 10px 7px rgba(231, 226, 245, 1);
+
+  animation: pupilAnimationSize 4s cubic-bezier(1, 0, 1, 1) infinite,
+    pupilAnimationView 4s ease infinite;
+}
+@keyframes pupilAnimationSize {
+  0%,
+  30%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  40%,
+  90% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+@keyframes pupilAnimationView {
+  0%,
+  30%,
+  100% {
+    box-shadow: inset -50px -20px 30px 0px #e7e2f5,
+      inset 100px 10px 20px -27px #2f2c4c,
+      0px 0px 10px 7px rgba(231, 226, 245, 1);
+  }
+  60%,
+  66% {
+    box-shadow: inset -50px -20px 30px 0px rgba(231, 226, 245, 0),
+      inset 10px 10px 70px -27px rgba(47, 44, 76, 0),
+      0px 0px 10px 7px hsla(256, 49%, 92%, 0);
+  }
+  90% {
+    box-shadow: inset -50px -20px 30px 0px #e7e2f5,
+      inset 100px 10px 20px -27px #2f2c4c,
+      0px 0px 10px 7px rgba(231, 226, 245, 1);
+  }
+}
+
+.ja-translation {
+  position: relative;
+  width: 80%;
+  height: 70%;
+  top: -12%;
+  margin-left: 16px;
+  color: darken($color: #000000, $amount: 0);
+  font-weight: bolder;
+}
